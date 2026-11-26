@@ -1,22 +1,18 @@
 #ifndef CARD_H
 #define CARD_H
 
-#define TOTAL_CARDS 32
+// Total number of cards in a standard Omi deck
+#define DECK_SIZE 32
 
-// Structure to store one playing card
-struct Card
-{
-	char rank[6];
-	int suit;
-};
+// Structure representing a single playing card
+typedef struct {
+    char suit;  // 'H' = Hearts, 'D' = Diamonds, 'C' = Clubs, 'S' = Spades
+    int rank;   // 7, 8, 9, 10, 11 (Jack), 12 (Queen), 13 (King), 14 (Ace)
+} Card;
 
-// Function to create all 32 cards
-void createDeck(struct Card deck[]);
+// Function declarations for deck creation, shuffling, and displaying cards
+void createDeck(Card deck[]);
+void shuffleDeck(Card deck[]);
+void displayCards(Card cards[], int count);
 
-// Function to shuffle the deck
-void shuffleDeck(struct Card deck[]);
-
-// Function to display cards
-void displayCard(struct Card card);
-
-#endif       
+#endif
