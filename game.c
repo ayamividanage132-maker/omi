@@ -79,4 +79,5 @@ void selectTrump(void)
             printf("\nInvalid choice!\n");
             break;
     }
+
 }
