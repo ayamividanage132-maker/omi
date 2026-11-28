@@ -3,10 +3,20 @@
 
 #include "card.h"
 
-#define TOTAL_PLAYERS 4
+#define PLAYER_COUNT 4
 #define HAND_SIZE 8
-#define FIRST_DEAL 4
 
-void startGame(void);
+// Structure to store player information
+typedef struct
+{
+    int playerNo;
+    Card hand[HAND_SIZE];
+} Player;
+
+// Function declarations
+void displayWelcome(void);
+void displayTeams(void);
+void dealCards(Card deck[], Player players[]);
+void selectTrump(void);
 
 #endif
